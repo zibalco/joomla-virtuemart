@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="3.x" type="plugin" group="vmpayment" method="upgrade">
+    <name>پلاگین درگاه پرداخت آنلاین زیبال برای ویرچومارت ۳ </name>
+    <creationDate>95/3/3</creationDate>
+    <author>Zibal</author>
+    <authorUrl>https://zibal.org</authorUrl>
+    <copyright>https://zibal.org</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>3.0.2</version>
+    <description>
+	<![CDATA[
+		<body>
+		    <h4 style="text-align:center" align="center" dir="rtl">
+		    پلاگین درگاه پرداخت آنلاین زیبال برای کامپوننت ویرچومارت ۳
+		    </h4>
+		    <table align="center">
+		        <tbody>
+		            <tr>
+		                <td>
+		                پشتیبانی شده توسط
+		                </td>
+		                <td>
+		                تیم فنی زیبال - <a href="https://zibal.ir">zibal.ir</a>
+		                </td>
+		            </tr>
+		        </tbody>
+		    </table>
+		</body>
+	]]>
+	</description>
+    <files>
+        <filename plugin="zibal">zibal.php</filename>
+        <filename>zibal.xml</filename>
+        <filename>index.html</filename>
+        <folder>language</folder>
+        <folder>zibal</folder>
+    </files>
+    <languages folder="language">
+        <language tag="fa-IR">fa-IR/fa-IR.plg_vmpayment_zibal.ini</language>
+    </languages>
+
+    <vmconfig>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_virtuemart/elements">
+                <field type="spacer" name="spacer" label="ZIBAL_DESCRIPTION"/>
+                <field type="text" name="api" label="API" description="API_DESC" />
+				<field name="currency" type="list" default="Rial" label="CURRENCY" description="CURRENCY_DESC">
+					<option value="Rial">ریال</option>
+					<option value="Toman">تومان</option>
+				</field>
+            </fieldset>
+        </fields>
+    </vmconfig>
+</extension>
